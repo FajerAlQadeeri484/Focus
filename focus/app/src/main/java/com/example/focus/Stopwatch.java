@@ -31,9 +31,9 @@ public class Stopwatch extends AppCompatActivity implements TaskDialog.TaskDialo
     private boolean running;
     String timeToked;
     String taskDone;
-    //long elapsed;
-    //TextView timeTokedtxtVi;
-    //TextView taskdonetxtvi;
+    int elapsed;
+    TextView timeTokedtxtVi;
+    TextView taskdonetxtvi;
     Button intentBtn;
     Date date;
     SimpleDateFormat df;
@@ -48,8 +48,8 @@ public class Stopwatch extends AppCompatActivity implements TaskDialog.TaskDialo
 
         loadData();
 
-        //timeTokedtxtVi= findViewById(R.id.textView2);
-        //taskdonetxtvi = findViewById(R.id.textView3);
+        timeTokedtxtVi= findViewById(R.id.textView2);
+        taskdonetxtvi = findViewById(R.id.textView3);
         intentBtn = findViewById(R.id.showbtn);
 
         chronometer = findViewById(R.id.chronometer);
@@ -78,15 +78,13 @@ public class Stopwatch extends AppCompatActivity implements TaskDialog.TaskDialo
             chronometer.stop();
             pauseOffset = SystemClock.elapsedRealtime() - chronometer.getBase();
             running = false;
-            //elapsed = (int) (SystemClock.elapsedRealtime()-chronometer.getBase());
-            //timeToked=(String.valueOf(elapsed));
-            //elapsed = SystemClock.elapsedRealtime()-chronometer.getBase();
-            timeToked=chronometer.getText().toString();
-            //Toast.makeText(Stopwatch.this, "time:"+timeToked,Toast.LENGTH_LONG).show();
+            //need to be fixed
+            elapsed = (int) (SystemClock.elapsedRealtime()-chronometer.getBase());
+            timeToked=(String.valueOf(elapsed));
             //
             //startActivity(new Intent(Stopwatch.this,Pop.class));
             openDialog();
-            //timeTokedtxtVi.setText(timeToked);
+            timeTokedtxtVi.setText(timeToked);
             date = Calendar.getInstance().getTime();
             df = new SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault());
             formattedDate = df.format(date);
@@ -106,7 +104,7 @@ public class Stopwatch extends AppCompatActivity implements TaskDialog.TaskDialo
     @Override
     public void applyTexts(String task) {
         taskDone=(task);
-        //taskdonetxtvi.setText(taskDone);
+        taskdonetxtvi.setText(taskDone);
         tasksList.add(timeToked+ "     "+formattedDate+ "     " + taskDone);
         saveData();
     }

@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="408dp"
+        android:layout_marginTop="400dp"
         android:backgroundTint="#194350"
         android:fontFamily="sans-serif-smallcaps"
         android:onClick="resetChronometer"
@@ -48,9 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
         android:layout_marginTop="345dp"
-        android:layout_marginEnd="95dp"
+        android:layout_marginEnd="122dp"
         android:backgroundTint="#AA4F57"
         android:fontFamily="sans-serif-smallcaps"
         android:onClick="pauseChronometer"
@@ -64,9 +63,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="91dp"
-        android:layout_marginTop="346dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="345dp"
         android:backgroundTint="#41873E"
         android:fontFamily="sans-serif-smallcaps"
         android:onClick="startChronometer"
@@ -74,11 +72,39 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="104dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="169dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#9dbeb9"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="104dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="118dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#9dbeb9"
+        android:textSize="18sp" />
+
     <Button
         android:id="@+id/showbtn"
-        android:layout_marginTop="500dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="143dp"
+        android:layout_marginBottom="225dp"
         android:backgroundTint="#194350"
         android:text="Show Tasks" />
 
